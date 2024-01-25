@@ -1,0 +1,16 @@
+<div class="todo-list">
+  <label *ngIf="tasks.length == 0">No tasks to be done </label>
+</div>
+<li class="todo-list__tasks-list" *ngFor="let task of tasks">
+  <label [ngClass]="{ 'todo-list__task-done': task.done,  'todo-list__task-not-done': !task.done}">
+    <input type="checkbox" [(ngModel)]="task.done" />
+    {{ task.title }}
+  </label>
+</li>
+<div class="todo-list__input">
+  <input type="text" placeholder="add task" [(ngModel)]="taskName" />
+</div>
+<div class="todo-list__buttons">
+  <button [disabled]="!taskName" (click)="addTask()">Add Tasks</button>
+  <button (click)="clearTasks()">Clear all Tasks</button>
+</div>

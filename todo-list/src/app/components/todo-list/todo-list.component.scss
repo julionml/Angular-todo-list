@@ -1,0 +1,36 @@
+.todo-list {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: larger;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: aqua;
+
+  &__input {
+    display: flex;
+    margin-left: 50px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  &__tasks-list {
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+
+  &__task-done{
+    color:red;
+    text-decoration: line-through;
+  }
+  &__task-not-done{
+    font-weight: bold;
+  }
+}
